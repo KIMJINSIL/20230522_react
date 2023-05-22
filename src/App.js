@@ -1,7 +1,13 @@
+import { Text,Button } from "@chakra-ui/react";
 
 function App() {
   return (
-    <div>app</div>
+    <>
+      <Text fontWeight={600} color={"red.500"}>app</Text>
+      <Button colorScheme='red'>Button</Button>
+      <Button colorScheme='teal' variant='outline'>Button</Button>
+    
+    </>
   );
 }
 
