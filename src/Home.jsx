@@ -1,5 +1,6 @@
 import { Box, Grid, GridItem, Text, VStack } from "@chakra-ui/react";
 import Layout from "./Layout";
+import { Link } from "react-router-dom";
 
 const dataTour = [
     {text : "6월 이벤트", image : "https://cdn.pixabay.com/photo/2016/11/23/15/32/pedestrians-1853552_960_720.jpg"},
@@ -43,22 +44,24 @@ export default function Home(){
                         position="relative"
                         overflow="hidden"
                         >
-                        <Box 
-                          position="absolute" top="0" left="0" 
-                          w="full" h="full" 
-                          bgGradient="linear(to-b, rgba(0,0,0,0.3), rgba(0,0,0,0.7))"
-                        >
-                            <Text 
-                              color="white" 
-                              w="full"
-                              position="absolute" bottom="0" 
-                              align="center" 
-                              fontWeight="600" 
-                              py="4"
-                            >
-                              {list.text}
-                            </Text>
-                        </Box>
+                        <Link to="/detail">
+                          <Box 
+                            position="absolute" top="0" left="0" 
+                            w="full" h="full" 
+                            bgGradient="linear(to-b, rgba(0,0,0,0.3), rgba(0,0,0,0.7))"
+                          >
+                              <Text 
+                                color="white" 
+                                w="full"
+                                position="absolute" bottom="0" 
+                                align="center" 
+                                fontWeight="600" 
+                                py="4"
+                              >
+                                {list.text}
+                              </Text>
+                          </Box>
+                        </Link>
                       </GridItem>
                     ))
                   }
